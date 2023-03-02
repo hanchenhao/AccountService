@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<project>
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.hanchenhao.app</groupId>
+    <artifactId>AccountSerivce</artifactId>
+    <version>1</version>
+    <packaging>jar</packaging>
+    <name>Account Service</name>
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>3.0.3</version>
+    </parent>
+    <properties>
+        <mavenVersion>3.0</mavenVersion>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+<!--        <slf4j.version>1.7.30</slf4j.version>-->
+<!--        <spring-data-releasetrain.version>Moore-SR6</spring-data-releasetrain.version>-->
+    </properties>
+    <profiles>
+        <profile>
+            <id>aliyunMavenMirror</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <pluginRepositories>
+                <pluginRepository>
+                    <id>alimaven</id>
+                    <name>aliyun maven</name>
+                    <url>http://maven.aliyun.com/nexus/content/groups/public/</url>
+                </pluginRepository>
+            </pluginRepositories>
+            <repositories>
+                <repository>
+                    <id>alimaven</id>
+                    <name>aliyun maven</name>
+                    <url>http://maven.aliyun.com/nexus/content/groups/public/</url>
+                </repository>
+            </repositories>
+        </profile>
+        <profile>
+            <id>mavenCentral</id>
+            <pluginRepositories>
+                <pluginRepository>
+                    <id>mavenCentral</id>
+                    <name>mavenCentral</name>
+                    <url>https://repo.maven.apache.org/maven2</url>
+                </pluginRepository>
+            </pluginRepositories>
+            <repositories>
+                <repository>
+                    <id>mavenCentral</id>
+                    <name>mavenCentral</name>
+                    <url>https://repo.maven.apache.org/maven2</url>
+                </repository>
+            </repositories>
+        </profile>
+    </profiles>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+            <version>3.0.3</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-devtools</artifactId>
+            <scope>runtime</scope>
+            <optional>true</optional>
+        </dependency>
+    </dependencies>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <version>${project.parent.version}</version>
+            </plugin>
+        </plugins>
+    </build>
+</project>
