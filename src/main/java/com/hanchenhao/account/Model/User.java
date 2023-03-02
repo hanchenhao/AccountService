@@ -1,4 +1,4 @@
-package com.hanchenhao.account.Models;
+package com.hanchenhao.account.Model;
 
 public class User {
     private String name;
