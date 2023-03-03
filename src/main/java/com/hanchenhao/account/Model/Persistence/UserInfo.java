@@ -7,7 +7,7 @@ import java.time.LocalTime;
 @Data
 @Builder
 public class UserInfo {
-    private String id;
+    private long id;
     private String userName;
     private String password;
     private LocalTime createdAt;

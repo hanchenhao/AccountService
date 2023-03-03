@@ -4,7 +4,7 @@ import com.hanchenhao.account.Model.Persistence.UserInfo;
 
 public interface UserInfoDAO  {
 
-    UserInfo getUserInfoById(String id);
+    UserInfo getUserInfoById(long id);
 
     UserInfo getUserInfoByUserName(String username);
 

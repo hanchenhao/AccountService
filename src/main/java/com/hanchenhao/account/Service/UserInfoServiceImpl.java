@@ -19,7 +19,7 @@ public class UserInfoServiceImpl implements UserInfoService{
     }
 
     @Override
-    public UserInfo getUserInfoById(String id) {
+    public UserInfo getUserInfoById(long id) {
         return persistenceDataToCommon.convert(userInfoDAO.getUserInfoById(id));
     }
 }
