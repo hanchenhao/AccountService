@@ -1,17 +1,24 @@
 package com.hanchenhao.account.Controller;
 
-import com.hanchenhao.account.Model.User;
+import com.hanchenhao.account.Converter.Service.UserInfoServiceConverter;
+import com.hanchenhao.account.Model.Service.UserInfo;
+import com.hanchenhao.account.Service.UserInfoService;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
-
-import java.util.concurrent.atomic.AtomicLong;
 
 @RestController
 public class UserController {
-    private final AtomicLong counter = new AtomicLong();
-    @GetMapping("/v1/greeting")
-    public  User sayHello(@RequestParam("name") String name){
-        return new User(name,counter.incrementAndGet() + "");
+    private final UserInfoService userInfoService;
+    private final UserInfoServiceConverter commonDataToService;
+    public UserController(UserInfoService userInfoService, UserInfoServiceConverter converter) {
+        this.userInfoService = userInfoService;
+        this.commonDataToService = converter;
+    }
+
+    @GetMapping("/{id}")
+    public UserInfo getUserInfoById(@PathVariable("id") String id){
+        System.out.println("id = " + id);
+        return commonDataToService.convert(userInfoService.getUserInfoById(id));
     }
 }

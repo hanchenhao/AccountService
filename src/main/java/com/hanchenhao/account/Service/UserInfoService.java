@@ -1,7 +1,7 @@
 package com.hanchenhao.account.Service;
 
-import com.hanchenhao.account.Model.Service.UserInfo;
+import com.hanchenhao.account.Model.Common.UserInfo;
 
 public interface UserInfoService {
-    public UserInfo getUserInfoById(String id);
+     UserInfo getUserInfoById(String id);
 }

@@ -1,8 +1,8 @@
 package com.hanchenhao.account.Service;
 
-import com.hanchenhao.account.Converter.Service.UserInfoServiceConverter;
+import com.hanchenhao.account.Converter.Common.UserInfoCommonConverter;
 import com.hanchenhao.account.DAO.Implement.UserInfoDAO;
-import com.hanchenhao.account.Model.Service.UserInfo;
+import com.hanchenhao.account.Model.Common.UserInfo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -10,17 +10,16 @@ import org.springframework.stereotype.Component;
 public class UserInfoServiceImpl implements UserInfoService{
 
     final private UserInfoDAO userInfoDAO;
-    final private UserInfoServiceConverter converter;
+    final private UserInfoCommonConverter persistenceDataToCommon;
 
     @Autowired
-    public UserInfoServiceImpl(UserInfoDAO userInfoDAO, UserInfoServiceConverter converter) {
+    public UserInfoServiceImpl(UserInfoDAO userInfoDAO, UserInfoCommonConverter converter) {
         this.userInfoDAO = userInfoDAO;
-        this.converter = converter;
+        this.persistenceDataToCommon = converter;
     }
-
 
     @Override
     public UserInfo getUserInfoById(String id) {
-        return null;
+        return persistenceDataToCommon.convert(userInfoDAO.getUserInfoById(id));
     }
 }
