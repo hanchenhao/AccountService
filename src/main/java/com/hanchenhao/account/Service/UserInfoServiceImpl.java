@@ -7,7 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 @Component
-public class UserInfoServiceImpl implements UserInfoService{
+public class UserInfoServiceImpl implements UserInfoService {
 
     final private UserInfoDAO userInfoDAO;
     final private UserInfoCommonConverter persistenceDataToCommon;

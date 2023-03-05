@@ -1,7 +1,7 @@
 package com.hanchenhao.account.Converter.Common;
+import com.hanchenhao.account.Model.Persistence.UserInfo;
 
 import com.google.common.base.Converter;
-import com.hanchenhao.account.Model.Persistence.UserInfo;
 import org.springframework.stereotype.Component;
 
 @Component

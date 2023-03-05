@@ -6,7 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public class UserInfoDaoImpl implements UserInfoDAO{
+public class UserInfoDaoImpl implements UserInfoDAO {
 
     private final UserInfoMapper mapper;
 

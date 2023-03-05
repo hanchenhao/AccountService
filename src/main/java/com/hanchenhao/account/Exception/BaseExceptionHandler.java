@@ -18,7 +18,6 @@ public class BaseExceptionHandler {
                 .statusCode(e.getStatusCode())
                 .errorType(e.getErrorType())
                 .build();
-//        return ResponseEntity.status(e.getStatusCode()).body(error);
         return ResponseEntity.status(e.getStatusCode() != 0 ? e.getStatusCode()
                         : HttpStatus.INTERNAL_SERVER_ERROR.value())
                 .contentType(MediaType.APPLICATION_JSON)

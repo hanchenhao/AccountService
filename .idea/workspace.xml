@@ -4,17 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d1617799-2e14-4baa-a27a-bb4556a3bbd3" name="Changes" comment="feat(config mybatis dependencies)">
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/hanchenhao/account/Exception/BaseExceptionHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/hanchenhao/account/Exception/ErrorContent.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/hanchenhao/account/Exception/InvalidParamException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/hanchenhao/account/Exception/ServiceException.java" afterDir="false" />
+    <list default="true" id="d1617799-2e14-4baa-a27a-bb4556a3bbd3" name="Changes" comment="feat(exception handler)">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/hanchenhao/account/Config/checkstyle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/hanchenhao/account/Service/UserInfoServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/AccountService.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/AccountService.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/hanchenhao/account/Controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hanchenhao/account/Controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hanchenhao/account/Converter/Common/UserInfoCommonConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hanchenhao/account/Converter/Common/UserInfoCommonConverter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hanchenhao/account/DAO/Implement/UserInfoDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hanchenhao/account/DAO/Implement/UserInfoDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hanchenhao/account/DAO/Implement/UserInfoDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hanchenhao/account/DAO/Implement/UserInfoDaoImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/hanchenhao/account/DAO/Mapper/UserInfoMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hanchenhao/account/DAO/Mapper/UserInfoMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hanchenhao/account/Exception/BaseExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hanchenhao/account/Exception/BaseExceptionHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hanchenhao/account/Exception/InvalidParamException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hanchenhao/account/Exception/InvalidParamException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hanchenhao/account/Model/Persistence/UserInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hanchenhao/account/Model/Persistence/UserInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hanchenhao/account/Service/UserInfoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hanchenhao/account/Service/UserInfoService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hanchenhao/account/Service/UserInfoServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hanchenhao/account/Service/UserInfoServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,6 +84,11 @@
     ]
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/java/com/hanchenhao/account/Config" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="MyApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="AccountService" />
@@ -98,7 +108,7 @@
       <updated>1677654518993</updated>
       <workItem from="1677654520526" duration="6729000" />
       <workItem from="1677721530638" duration="2319000" />
-      <workItem from="1677723859654" duration="36592000" />
+      <workItem from="1677723859654" duration="45249000" />
     </task>
     <task id="LOCAL-00001" summary="chore(ignore)&#10;add some fields of ignore">
       <created>1677658024346</created>
@@ -149,7 +159,14 @@
       <option name="project" value="LOCAL" />
       <updated>1677815400522</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="feat(exception handler)">
+      <created>1677829352581</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1677829352582</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -175,7 +192,8 @@
     <MESSAGE value="feat(build project structure)" />
     <MESSAGE value="feat(build project structure):add flyway plugin" />
     <MESSAGE value="feat(config mybatis dependencies)" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat(config mybatis dependencies)" />
+    <MESSAGE value="feat(exception handler)" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat(exception handler)" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
