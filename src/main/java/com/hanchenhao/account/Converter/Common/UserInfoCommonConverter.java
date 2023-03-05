@@ -2,9 +2,11 @@ package com.hanchenhao.account.Converter.Common;
 import com.hanchenhao.account.Model.Persistence.UserInfo;
 
 import com.google.common.base.Converter;
+import lombok.EqualsAndHashCode;
 import org.springframework.stereotype.Component;
 
 @Component
+@EqualsAndHashCode(callSuper = true)
 public class UserInfoCommonConverter extends Converter<UserInfo, com.hanchenhao.account.Model.Common.UserInfo> {
     @Override
     protected com.hanchenhao.account.Model.Common.UserInfo doForward(UserInfo userInfo) {
