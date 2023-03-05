@@ -4,11 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d1617799-2e14-4baa-a27a-bb4556a3bbd3" name="Changes" comment="chore(check style) config checkstyle plugin">
+    <list default="true" id="d1617799-2e14-4baa-a27a-bb4556a3bbd3" name="Changes" comment="chore(spotbugs plugin) config spotbugs plugin">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hanchenhao/account/Converter/Common/UserInfoCommonConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hanchenhao/account/Converter/Common/UserInfoCommonConverter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hanchenhao/account/Converter/Service/UserInfoServiceConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hanchenhao/account/Converter/Service/UserInfoServiceConverter.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,7 +76,10 @@
       <recent name="$PROJECT_DIR$/src/main/java/com/hanchenhao/account/Config" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JavaScript Debug.jacoco.exec">
+    <configuration name="jacoco.exec" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/AccountService/target/jacoco.exec" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
     <configuration name="MyApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="AccountService" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.hanchenhao.account.MyApplication" />
@@ -86,6 +87,11 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JavaScript Debug.jacoco.exec" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -97,7 +103,7 @@
       <updated>1677654518993</updated>
       <workItem from="1677654520526" duration="6729000" />
       <workItem from="1677721530638" duration="2319000" />
-      <workItem from="1677723859654" duration="45889000" />
+      <workItem from="1677723859654" duration="46893000" />
     </task>
     <task id="LOCAL-00001" summary="chore(ignore)&#10;add some fields of ignore">
       <created>1677658024346</created>
@@ -162,7 +168,14 @@
       <option name="project" value="LOCAL" />
       <updated>1678023749724</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="chore(spotbugs plugin) config spotbugs plugin">
+      <created>1678024345021</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1678024345021</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -190,7 +203,8 @@
     <MESSAGE value="feat(config mybatis dependencies)" />
     <MESSAGE value="feat(exception handler)" />
     <MESSAGE value="chore(check style) config checkstyle plugin" />
-    <option name="LAST_COMMIT_MESSAGE" value="chore(check style) config checkstyle plugin" />
+    <MESSAGE value="chore(spotbugs plugin) config spotbugs plugin" />
+    <option name="LAST_COMMIT_MESSAGE" value="chore(spotbugs plugin) config spotbugs plugin" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
