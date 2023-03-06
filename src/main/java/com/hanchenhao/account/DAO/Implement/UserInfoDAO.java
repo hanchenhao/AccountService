@@ -6,6 +6,4 @@ public interface UserInfoDAO {
 
     UserInfo getUserInfoById(long id);
 
-    UserInfo getUserInfoByUserName(String username);
-
 }

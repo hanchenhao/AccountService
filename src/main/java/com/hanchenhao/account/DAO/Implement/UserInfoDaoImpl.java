@@ -20,8 +20,4 @@ public class UserInfoDaoImpl implements UserInfoDAO {
         return mapper.getUserInfoById(id);
     }
 
-    @Override
-    public UserInfo getUserInfoByUserName(String username) {
-        return null;
-    }
 }
