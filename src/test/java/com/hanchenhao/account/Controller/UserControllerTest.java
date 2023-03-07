@@ -1,15 +1,11 @@
 package com.hanchenhao.account.Controller;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
 import com.hanchenhao.account.Converter.Service.UserInfoServiceConverter;
 import com.hanchenhao.account.Exception.BaseExceptionHandler;
-import com.hanchenhao.account.Exception.InvalidParamException;
-import com.hanchenhao.account.Exception.ServiceException;
 import com.hanchenhao.account.Model.Common.UserInfo;
 import com.hanchenhao.account.Service.UserInfoService;
-import jakarta.annotation.Resource;
+
 import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -17,11 +13,9 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.junit.jupiter.MockitoExtension;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
-import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
+import com.fasterxml.jackson.databind.ObjectMapper;
 
 import static org.mockito.Mockito.never;
 import static org.mockito.Mockito.reset;

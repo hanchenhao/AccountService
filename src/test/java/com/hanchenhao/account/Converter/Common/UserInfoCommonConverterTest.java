@@ -6,18 +6,12 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import java.time.LocalTime;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 class UserInfoCommonConverterTest {
 
     private UserInfo commonUserInfo;
     private com.hanchenhao.account.Model.Persistence.UserInfo persistUserInfo;
     private UserInfoCommonConverter userInfoCommonConverter;
-
-
-//    private final LocalTime time = LocalTime.now();
 
     @BeforeEach
     void setUp() {

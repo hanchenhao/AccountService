@@ -14,7 +14,6 @@ import org.springframework.web.bind.annotation.RestController;
 public class UserController {
     private final UserInfoService userInfoService;
     private final UserInfoServiceConverter commonDataToService;
-
     @Autowired
     public UserController(UserInfoService userInfoService, UserInfoServiceConverter converter) {
         this.userInfoService = userInfoService;
