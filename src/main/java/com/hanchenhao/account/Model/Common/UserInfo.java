@@ -9,4 +9,5 @@ public class UserInfo {
     private long id;
     private String userName;
     private String password;
+
 }

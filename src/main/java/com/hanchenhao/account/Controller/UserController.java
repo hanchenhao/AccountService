@@ -7,6 +7,7 @@ import com.hanchenhao.account.Service.UserInfoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -14,6 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class UserController {
     private final UserInfoService userInfoService;
     private final UserInfoServiceConverter commonDataToService;
+
     @Autowired
     public UserController(UserInfoService userInfoService, UserInfoServiceConverter converter) {
         this.userInfoService = userInfoService;
@@ -28,6 +30,14 @@ public class UserController {
         var userinfo = userInfoService.getUserInfoById(id);
         var serviceData = commonDataToService.convert(userinfo);
         return ResponseEntity.ok(serviceData);
+    }
+
+    @PostMapping("/register")
+    public ResponseEntity<UserInfo> userRegister(@RequestParam("username") String name,
+                                                 @RequestParam("password") String password) {
+        userInfoService.userInfoRegister(name, password);
+//        var serviceData = commonDataToService.convert(userInfo);
+        return null;
     }
 
     private boolean isLegalParam(long id) {

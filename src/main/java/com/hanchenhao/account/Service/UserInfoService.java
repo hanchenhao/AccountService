@@ -4,4 +4,7 @@ import com.hanchenhao.account.Model.Common.UserInfo;
 
 public interface UserInfoService {
     UserInfo getUserInfoById(long id);
+
+    void userInfoRegister(String name, String password);
+
 }
