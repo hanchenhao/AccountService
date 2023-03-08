@@ -6,9 +6,9 @@ CREATE TABLE `account_userinfo`
     `salt`        varchar(50)         NOT NULL,
     `create_time` datetime            NOT NULL,
     `update_time` datetime DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
-    `roles`       set (10),
-    `perms`       set (10),
-    `status`      tinyint DEFAULT 1,
+    `roles`       set ('normal'),
+    `perms`       set ('normal'),
+    `status`      tinyint DEFAULT 1 ,
     PRIMARY KEY `pk_id` (`id`),
     UNIQUE KEY `uk_username` (`username`)
 ) ENGINE = InnoDB

@@ -1,5 +1,4 @@
 package com.hanchenhao.account.DAO.Implement;
-
 import com.hanchenhao.account.DAO.Mapper.UserInfoMapper;
 import com.hanchenhao.account.Model.Persistence.UserInfo;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,8 +20,13 @@ public class UserInfoDaoImpl implements UserInfoDAO {
     }
 
     @Override
-    public void userInfoRegister(UserInfo userInfo) {
-         mapper.userInfoRegister(userInfo);
+    public UserInfo getUserInfoByUserName(String name) {
+        return mapper.getUserInfoByUserName(name);
+    }
+
+    @Override
+    public int userInfoRegister(UserInfo userInfo) {
+        return mapper.userInfoRegister(userInfo);
     }
 
 }

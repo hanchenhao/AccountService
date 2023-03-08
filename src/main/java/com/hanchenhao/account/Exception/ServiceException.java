@@ -7,10 +7,10 @@ import lombok.EqualsAndHashCode;
 @EqualsAndHashCode(callSuper = true)
 @Data
 public class ServiceException extends RuntimeException {
-    enum ErrorType {
+    public enum ErrorType {
         SERVICE,
         CLIENT,
-        UNKNOWN
+        Client, UNKNOWN
     }
 
     private int statusCode; //http状态码

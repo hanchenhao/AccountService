@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d1617799-2e14-4baa-a27a-bb4556a3bbd3" name="Changes" comment="feat(improve unit testing coverage)">
+    <list default="true" id="d1617799-2e14-4baa-a27a-bb4556a3bbd3" name="Changes" comment="feat(user register)">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/hanchenhao/account/Config/SecurityConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/AccountService.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/AccountService.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
@@ -12,12 +14,14 @@
       <change beforePath="$PROJECT_DIR$/src/main/java/com/hanchenhao/account/DAO/Implement/UserInfoDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hanchenhao/account/DAO/Implement/UserInfoDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/hanchenhao/account/DAO/Implement/UserInfoDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hanchenhao/account/DAO/Implement/UserInfoDaoImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/hanchenhao/account/DAO/Mapper/UserInfoMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hanchenhao/account/DAO/Mapper/UserInfoMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hanchenhao/account/Exception/ServiceException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hanchenhao/account/Exception/ServiceException.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/hanchenhao/account/Model/Common/UserInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hanchenhao/account/Model/Common/UserInfo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/hanchenhao/account/Model/Persistence/UserInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hanchenhao/account/Model/Persistence/UserInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hanchenhao/account/Model/Service/UserInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hanchenhao/account/Model/Service/UserInfo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/hanchenhao/account/Service/UserInfoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hanchenhao/account/Service/UserInfoService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/hanchenhao/account/Service/UserInfoServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hanchenhao/account/Service/UserInfoServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/db/migration/V1__create_init_table.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/db/migration/V1__create_init_table.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/hanchenhao/account/Service/UserInfoServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/hanchenhao/account/Service/UserInfoServiceTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,8 +32,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
-        <option value="Class" />
         <option value="JUnit5 Test Class" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -200,6 +204,9 @@
     </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SpringBeansView">
+    <option name="beanDetailsProportion" value="0.3" />
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="d1617799-2e14-4baa-a27a-bb4556a3bbd3" name="Changes" comment="" />
@@ -209,7 +216,7 @@
       <updated>1677654518993</updated>
       <workItem from="1677654520526" duration="6729000" />
       <workItem from="1677721530638" duration="2319000" />
-      <workItem from="1677723859654" duration="91801000" />
+      <workItem from="1677723859654" duration="140622000" />
     </task>
     <task id="LOCAL-00001" summary="chore(ignore)&#10;add some fields of ignore">
       <created>1677658024346</created>
@@ -309,7 +316,14 @@
       <option name="project" value="LOCAL" />
       <updated>1678159747606</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="feat(user register)">
+      <created>1678174647411</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1678174647411</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -341,7 +355,15 @@
     <MESSAGE value="chore(jacoco plugin) config jacoco plugin" />
     <MESSAGE value="chore(jacoco plugin) config lombok annotation for jacoco" />
     <MESSAGE value="feat(improve unit testing coverage)" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat(improve unit testing coverage)" />
+    <MESSAGE value="feat(user register)" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat(user register)" />
+  </component>
+  <component name="XDebuggerManager">
+    <pin-to-top-manager>
+      <pinned-members>
+        <PinnedItemInfo parentTag="org.apache.shiro.spring.web.ShiroFilterFactoryBean" memberName="filterChainDefinitionMap" />
+      </pinned-members>
+    </pin-to-top-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
