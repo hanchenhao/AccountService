@@ -2,6 +2,7 @@ package com.hanchenhao.account.Service;
 
 import com.hanchenhao.account.Converter.Common.UserInfoCommonConverter;
 import com.hanchenhao.account.DAO.Implement.UserInfoDAO;
+import com.hanchenhao.account.Service.User.UserInfoServiceImpl;
 import lombok.val;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
@@ -12,7 +13,7 @@ import org.mockito.Mockito;
 import org.mockito.junit.jupiter.MockitoExtension;
 import org.springframework.boot.test.context.SpringBootTest;
 
-import java.time.LocalTime;
+import java.time.LocalDateTime;
 
 
 @SpringBootTest
@@ -24,7 +25,7 @@ public class UserInfoServiceTest {
 
     @BeforeEach
     public void setup() {
-        userInfoService = new UserInfoServiceImpl(userInfoDAO, new UserInfoCommonConverter());
+        userInfoService = new UserInfoServiceImpl(userInfoDAO, new UserInfoCommonConverter(), authentication -> null);
     }
 
     @Test
@@ -32,14 +33,14 @@ public class UserInfoServiceTest {
         String name = "hanchenhao";
         String password = "123456";
         long userId = 1;
-        LocalTime time = LocalTime.now();
+        LocalDateTime time = LocalDateTime.now();
 
         var userInfo = com.hanchenhao.account.Model.Persistence.UserInfo.builder()
                 .userName(name)
                 .password(password)
                 .id(userId)
-                .createdAt(time)
-                .updatedAt(time)
+                .createTime(time)
+                .updateTime(time)
                 .build();
 
         Mockito.doReturn(userInfo).when(userInfoDAO).getUserInfoById(userId);

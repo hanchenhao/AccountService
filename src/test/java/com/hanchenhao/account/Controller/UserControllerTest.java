@@ -3,7 +3,7 @@ package com.hanchenhao.account.Controller;
 import com.hanchenhao.account.Converter.Service.UserInfoServiceConverter;
 import com.hanchenhao.account.Exception.BaseExceptionHandler;
 import com.hanchenhao.account.Model.Common.UserInfo;
-import com.hanchenhao.account.Service.UserInfoService;
+import com.hanchenhao.account.Service.User.UserInfoService;
 
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
@@ -43,6 +43,7 @@ class UserControllerTest {
         mockMvc = MockMvcBuilders.standaloneSetup(userController)
                 .setControllerAdvice(new BaseExceptionHandler())
                 .build();
+
     }
 
     @AfterEach

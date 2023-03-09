@@ -4,24 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d1617799-2e14-4baa-a27a-bb4556a3bbd3" name="Changes" comment="feat(user register)">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/hanchenhao/account/Config/SecurityConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/index.html" afterDir="false" />
+    <list default="true" id="d1617799-2e14-4baa-a27a-bb4556a3bbd3" name="Changes" comment="chore(config spring security)">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/hanchenhao/account/Config/WebConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/hanchenhao/account/Security/Login/LoginUser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/hanchenhao/account/Security/Utiils/JwtUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/hanchenhao/account/Service/User/UserDetailsServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/AccountService.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/AccountService.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hanchenhao/account/Config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hanchenhao/account/Config/SecurityConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/hanchenhao/account/Controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hanchenhao/account/Controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hanchenhao/account/DAO/Implement/UserInfoDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hanchenhao/account/DAO/Implement/UserInfoDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hanchenhao/account/DAO/Implement/UserInfoDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hanchenhao/account/DAO/Implement/UserInfoDaoImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hanchenhao/account/DAO/Mapper/UserInfoMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hanchenhao/account/DAO/Mapper/UserInfoMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hanchenhao/account/Exception/ServiceException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hanchenhao/account/Exception/ServiceException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hanchenhao/account/Model/Common/UserInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hanchenhao/account/Model/Common/UserInfo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hanchenhao/account/Model/Persistence/UserInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hanchenhao/account/Model/Persistence/UserInfo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hanchenhao/account/Model/Service/UserInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hanchenhao/account/Model/Service/UserInfo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hanchenhao/account/Service/UserInfoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hanchenhao/account/Service/UserInfoService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hanchenhao/account/Service/UserInfoServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hanchenhao/account/Service/UserInfoServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/db/migration/V1__create_init_table.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/db/migration/V1__create_init_table.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hanchenhao/account/Service/UserInfoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hanchenhao/account/Service/User/UserInfoService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hanchenhao/account/Service/UserInfoServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hanchenhao/account/Service/User/UserInfoServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/hanchenhao/account/Controller/UserControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/hanchenhao/account/Controller/UserControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/hanchenhao/account/Service/UserInfoServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/hanchenhao/account/Service/UserInfoServiceTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -216,7 +212,7 @@
       <updated>1677654518993</updated>
       <workItem from="1677654520526" duration="6729000" />
       <workItem from="1677721530638" duration="2319000" />
-      <workItem from="1677723859654" duration="140622000" />
+      <workItem from="1677723859654" duration="174175000" />
     </task>
     <task id="LOCAL-00001" summary="chore(ignore)&#10;add some fields of ignore">
       <created>1677658024346</created>
@@ -323,7 +319,14 @@
       <option name="project" value="LOCAL" />
       <updated>1678174647411</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="chore(config spring security)">
+      <created>1678258882801</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1678258882801</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -356,9 +359,49 @@
     <MESSAGE value="chore(jacoco plugin) config lombok annotation for jacoco" />
     <MESSAGE value="feat(improve unit testing coverage)" />
     <MESSAGE value="feat(user register)" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat(user register)" />
+    <MESSAGE value="chore(config spring security)" />
+    <option name="LAST_COMMIT_MESSAGE" value="chore(config spring security)" />
   </component>
   <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/hanchenhao/account/Exception/BaseExceptionHandler.java</url>
+          <line>20</line>
+          <option name="timeStamp" value="44" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/hanchenhao/account/Service/User/UserInfoServiceImpl.java</url>
+          <line>66</line>
+          <option name="timeStamp" value="46" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/hanchenhao/account/Controller/UserController.java</url>
+          <line>48</line>
+          <option name="timeStamp" value="52" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/hanchenhao/account/Controller/UserController.java</url>
+          <line>47</line>
+          <option name="timeStamp" value="54" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/hanchenhao/account/Controller/UserController.java</url>
+          <line>45</line>
+          <option name="timeStamp" value="56" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/hanchenhao/account/Service/User/UserInfoServiceImpl.java</url>
+          <line>64</line>
+          <option name="timeStamp" value="57" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/hanchenhao/account/Service/User/UserDetailsServiceImpl.java</url>
+          <line>26</line>
+          <option name="timeStamp" value="58" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
     <pin-to-top-manager>
       <pinned-members>
         <PinnedItemInfo parentTag="org.apache.shiro.spring.web.ShiroFilterFactoryBean" memberName="filterChainDefinitionMap" />

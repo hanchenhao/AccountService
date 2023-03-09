@@ -36,9 +36,6 @@
     <orderEntry type="library" name="Maven: jakarta.annotation:jakarta.annotation-api:2.1.1" level="project" />
     <orderEntry type="library" name="Maven: org.yaml:snakeyaml:1.33" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-starter-json:3.0.3" level="project" />
-    <orderEntry type="library" name="Maven: com.fasterxml.jackson.core:jackson-databind:2.14.2" level="project" />
-    <orderEntry type="library" name="Maven: com.fasterxml.jackson.core:jackson-annotations:2.14.2" level="project" />
-    <orderEntry type="library" name="Maven: com.fasterxml.jackson.core:jackson-core:2.14.2" level="project" />
     <orderEntry type="library" name="Maven: com.fasterxml.jackson.datatype:jackson-datatype-jdk8:2.14.2" level="project" />
     <orderEntry type="library" name="Maven: com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.14.2" level="project" />
     <orderEntry type="library" name="Maven: com.fasterxml.jackson.module:jackson-module-parameter-names:2.14.2" level="project" />
@@ -47,7 +44,6 @@
     <orderEntry type="library" name="Maven: org.apache.tomcat.embed:tomcat-embed-el:10.1.5" level="project" />
     <orderEntry type="library" name="Maven: org.apache.tomcat.embed:tomcat-embed-websocket:10.1.5" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-web:6.0.5" level="project" />
-    <orderEntry type="library" name="Maven: org.springframework:spring-beans:6.0.5" level="project" />
     <orderEntry type="library" name="Maven: io.micrometer:micrometer-observation:1.10.4" level="project" />
     <orderEntry type="library" name="Maven: io.micrometer:micrometer-commons:1.10.4" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-webmvc:6.0.5" level="project" />
@@ -57,7 +53,6 @@
     <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-starter-jdbc:3.0.3" level="project" />
     <orderEntry type="library" name="Maven: com.zaxxer:HikariCP:5.0.1" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-jdbc:6.0.5" level="project" />
-    <orderEntry type="library" name="Maven: org.springframework:spring-tx:6.0.5" level="project" />
     <orderEntry type="library" name="Maven: org.mybatis.spring.boot:mybatis-spring-boot-autoconfigure:3.0.1" level="project" />
     <orderEntry type="library" name="Maven: org.mybatis:mybatis:3.5.11" level="project" />
     <orderEntry type="library" name="Maven: org.mybatis:mybatis-spring:3.0.1" level="project" />
@@ -68,7 +63,6 @@
     <orderEntry type="library" scope="TEST" name="Maven: net.minidev:json-smart:2.4.8" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: net.minidev:accessors-smart:2.4.8" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.ow2.asm:asm:9.1" level="project" />
-    <orderEntry type="library" name="Maven: org.slf4j:slf4j-api:2.0.6" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: jakarta.xml.bind:jakarta.xml.bind-api:4.0.0" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: jakarta.activation:jakarta.activation-api:2.1.1" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.assertj:assertj-core:3.23.1" level="project" />
@@ -116,5 +110,17 @@
     <orderEntry type="library" name="Maven: com.electronwill.night-config:core:3.6.6" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: junit:junit:4.13.2" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.hamcrest:hamcrest-core:2.2" level="project" />
+    <orderEntry type="library" name="Maven: com.10duke.client.jwt:jjwt:1.1.0" level="project" />
+    <orderEntry type="library" name="Maven: com.10duke.client.jwt:api:1.1.0" level="project" />
+    <orderEntry type="library" name="Maven: io.jsonwebtoken:jjwt-api:0.10.7" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Maven: io.jsonwebtoken:jjwt-impl:0.10.7" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Maven: io.jsonwebtoken:jjwt-jackson:0.10.7" level="project" />
+    <orderEntry type="library" name="Maven: com.fasterxml.jackson.core:jackson-databind:2.14.2" level="project" />
+    <orderEntry type="library" name="Maven: com.fasterxml.jackson.core:jackson-annotations:2.14.2" level="project" />
+    <orderEntry type="library" name="Maven: com.fasterxml.jackson.core:jackson-core:2.14.2" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework.ldap:spring-ldap-core:3.0.1" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework:spring-beans:6.0.5" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework:spring-tx:6.0.5" level="project" />
+    <orderEntry type="library" name="Maven: org.slf4j:slf4j-api:2.0.6" level="project" />
   </component>
 </module>
