@@ -12,6 +12,7 @@ import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.junit.jupiter.MockitoExtension;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.data.redis.core.RedisTemplate;
 
 import java.time.LocalDateTime;
 
@@ -23,9 +24,12 @@ public class UserInfoServiceTest {
     @Mock
     private UserInfoDAO userInfoDAO;
 
+    @Mock
+    RedisTemplate<String, Object> redisTemplate;
+
     @BeforeEach
     public void setup() {
-        userInfoService = new UserInfoServiceImpl(userInfoDAO, new UserInfoCommonConverter(), authentication -> null);
+        userInfoService = new UserInfoServiceImpl(userInfoDAO, new UserInfoCommonConverter(), authentication -> null,redisTemplate);
     }
 
     @Test

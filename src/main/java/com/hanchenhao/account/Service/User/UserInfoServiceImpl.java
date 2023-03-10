@@ -4,14 +4,19 @@ import com.hanchenhao.account.Converter.Common.UserInfoCommonConverter;
 import com.hanchenhao.account.DAO.Implement.UserInfoDAO;
 import com.hanchenhao.account.Model.Common.UserInfo;
 import com.hanchenhao.account.Security.Utiils.JwtUtils;
+import lombok.val;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.redis.core.RedisTemplate;
+import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Component;
 
 import java.time.LocalDateTime;
+import java.util.Objects;
 import java.util.UUID;
 
 @Component
@@ -19,16 +24,20 @@ public class UserInfoServiceImpl implements UserInfoService {
 
     final private UserInfoDAO userInfoDAO;
     final private UserInfoCommonConverter persistenceDataToCommon;
-
-
     final private AuthenticationManager authenticationManager;
+
+    private final RedisTemplate<String, Object> redisTemplate;
 
 
     @Autowired
-    public UserInfoServiceImpl(UserInfoDAO userInfoDAO, UserInfoCommonConverter converter, AuthenticationManager authenticationManager) {
+    public UserInfoServiceImpl(UserInfoDAO userInfoDAO,
+                               UserInfoCommonConverter converter,
+                               AuthenticationManager authenticationManager,
+                               RedisTemplate<String, Object> redisTemplate) {
         this.userInfoDAO = userInfoDAO;
         this.persistenceDataToCommon = converter;
         this.authenticationManager = authenticationManager;
+        this.redisTemplate = redisTemplate;
     }
 
     @Override
@@ -57,20 +66,28 @@ public class UserInfoServiceImpl implements UserInfoService {
     }
 
     @Override
-    public String login(UserInfo userInfo) {
+    public ResponseEntity login(UserInfo userInfo) {
         var token = new UsernamePasswordAuthenticationToken(userInfo.getUserName(), userInfo.getPassword());
         Authentication authenticate = authenticationManager.authenticate(token);
         if (authenticate.isAuthenticated()) {
             //生成jwt
             String jwt = JwtUtils.createJwt(String.valueOf(userInfo.getUserName()), 60);
-            return "Authorization：" + jwt;
+            // redis 存储jwt
+            redisTemplate.opsForValue().set("jwt:" + userInfo.getUserName(), jwt);
+            // 返回responsebody数据
+            return ResponseEntity.ok(jwt);
         }
-        return "用户登录失败";
+        return ResponseEntity.ok("参数错误");
     }
 
     @Override
     public String logout() {
-
-        return null;
+        //todo 删除Redis内的jwt token
+        val principal = SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+        if (Objects.isNull(principal)){
+            throw new RuntimeException("没有查询到用户信息");
+        }
+        redisTemplate.delete("jwt:" + principal);
+        return principal.toString() + ": 退出登录成功";
     }
 }

@@ -1,5 +1,7 @@
 package com.hanchenhao.account.Security.LoginDetails;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.hanchenhao.account.Model.Persistence.UserInfo;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -17,12 +19,13 @@ import java.util.stream.Collectors;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class LoginUserDetails implements UserDetails {
     private UserInfo userInfo;
-
-    private HashSet<String> permissions;
+    HashSet<String> permissions;
 
     @Override
+    @JsonIgnore
     public Collection<? extends GrantedAuthority> getAuthorities() {
         return permissions.stream().map(SimpleGrantedAuthority::new)
                 .collect(Collectors.toList());

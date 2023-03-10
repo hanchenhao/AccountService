@@ -1,4 +1,4 @@
-package com.hanchenhao.account.Config;
+package com.hanchenhao.account.Security.Config;
 
 import com.hanchenhao.account.Security.Filter.JwtAuthenticationTokenFilter;
 import org.springframework.beans.factory.annotation.Autowired;

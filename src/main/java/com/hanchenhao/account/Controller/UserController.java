@@ -43,8 +43,8 @@ public class UserController {
     }
 
     @PostMapping("/user/login")
-    public ResponseEntity<String> login(@RequestBody com.hanchenhao.account.Model.Common.UserInfo userInfo) {
-        return ResponseEntity.ok(userInfoService.login(userInfo));
+    public ResponseEntity login(@RequestBody com.hanchenhao.account.Model.Common.UserInfo userInfo) {
+        return userInfoService.login(userInfo);
     }
 
     @PostMapping("/user/register")
