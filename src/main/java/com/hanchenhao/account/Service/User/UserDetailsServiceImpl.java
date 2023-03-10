@@ -14,7 +14,7 @@ import java.util.Objects;
 
 @Service
 public class UserDetailsServiceImpl implements UserDetailsService {
-    UserInfoDAO dao;
+    private final UserInfoDAO dao;
 
     @Autowired
     public UserDetailsServiceImpl(UserInfoDAO dao) {

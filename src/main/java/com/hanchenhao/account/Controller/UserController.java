@@ -40,27 +40,12 @@ public class UserController {
         return "home hello";
     }
 
-    @PostMapping("/test/login")
+    @PostMapping("/user/login")
     public ResponseEntity<String> login(@RequestBody com.hanchenhao.account.Model.Common.UserInfo userInfo) {
-//        var userInfo = com.hanchenhao.account.Model.Common.UserInfo.builder()
-        System.out.println("userInfo = " + userInfo);
-//                .userName(name)
-//                .password(password).build();
         return ResponseEntity.ok(userInfoService.login(userInfo));
     }
 
-//    @PostMapping("/login")
-//    public String longin() {
-//
-//        // 用户认证
-//        return "login";
-
-//    }
-
-
-    @PostMapping("/register")
-
-//    @CrossOrigin
+    @PostMapping("/user/register")
     public ResponseEntity<UserInfo> userRegister(@RequestParam("username") String name,
                                                  @RequestParam("password") String password) {
         userInfoService.userInfoRegister(name, password);

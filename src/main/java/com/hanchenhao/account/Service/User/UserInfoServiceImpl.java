@@ -62,8 +62,9 @@ public class UserInfoServiceImpl implements UserInfoService {
         Authentication authenticate = authenticationManager.authenticate(token);
         if (authenticate.isAuthenticated()) {
             //生成jwt
-            return JwtUtils.createJwt(String.valueOf(userInfo.getId()), 60);
+            String jwt = JwtUtils.createJwt(String.valueOf(userInfo.getUserName()), 60);
+            return "Authorization：" + jwt;
         }
-        return "查询异常";
+        return "用户登录失败";
     }
 }
