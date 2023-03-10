@@ -1,4 +1,4 @@
-package com.hanchenhao.account.Security.Login;
+package com.hanchenhao.account.Security.LoginDetails;
 
 import com.hanchenhao.account.Model.Persistence.UserInfo;
 import lombok.AllArgsConstructor;
@@ -6,20 +6,26 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
 import java.util.Collection;
+import java.util.HashSet;
+import java.util.stream.Collectors;
 
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class LoginUser implements UserDetails {
+public class LoginUserDetails implements UserDetails {
     private UserInfo userInfo;
+
+    private HashSet<String> permissions;
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
-        return null;
+        return permissions.stream().map(SimpleGrantedAuthority::new)
+                .collect(Collectors.toList());
     }
 
     @Override

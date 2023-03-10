@@ -9,6 +9,7 @@ import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.lang.NonNull;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Component;
@@ -28,8 +29,8 @@ public class JwtAuthenticationTokenFilter extends OncePerRequestFilter {
 
     @Override
     protected void doFilterInternal(HttpServletRequest request,
-                                    HttpServletResponse response,
-                                    FilterChain filterChain) {
+                                    @NonNull HttpServletResponse response,
+                                    @NonNull FilterChain filterChain) {
         //获取token
         String token = request.getHeader("Authorization");
         if (StringUtils.isNullOrEmpty(token)) {
@@ -43,7 +44,7 @@ public class JwtAuthenticationTokenFilter extends OncePerRequestFilter {
         }
 
         String name = JwtUtils.parseJwt(token);
-        //读取用户信息
+        //读取用户信息token，没有token就提示登录，并抛异常
         UserInfo user = userInfoDAO.getUserInfoByUserName(name);
         //存入SecurityContextHolder中
         var authentication = new UsernamePasswordAuthenticationToken(user.getUserName(), user.getPassword(), null);

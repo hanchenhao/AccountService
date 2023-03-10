@@ -6,6 +6,7 @@ import com.hanchenhao.account.Model.Service.UserInfo;
 import com.hanchenhao.account.Service.User.UserInfoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
@@ -31,6 +32,7 @@ public class UserController {
     }
 
     @GetMapping("/test/test1")
+    @PreAuthorize("hasAuthority('test')")
     public String test1() {
         return "hhh";
     }
@@ -54,6 +56,11 @@ public class UserController {
                 .build();
         return ResponseEntity.ok(user);
     }
+    @PostMapping("/user/logout")
+    public ResponseEntity<String> logout() {
+        return ResponseEntity.ok(userInfoService.logout());
+    }
+
 
     private boolean isLegalParam(long id) {
         return id > 0;

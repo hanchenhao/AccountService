@@ -67,4 +67,10 @@ public class UserInfoServiceImpl implements UserInfoService {
         }
         return "用户登录失败";
     }
+
+    @Override
+    public String logout() {
+
+        return null;
+    }
 }

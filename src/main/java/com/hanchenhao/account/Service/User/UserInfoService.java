@@ -9,4 +9,5 @@ public interface UserInfoService {
     int userInfoRegister(String name, String password);
     String login(UserInfo userInfo);
 
+    String logout();
 }
