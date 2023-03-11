@@ -22,7 +22,7 @@ import java.util.stream.Collectors;
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class LoginUserDetails implements UserDetails {
     private UserInfo userInfo;
-    HashSet<String> permissions;
+    private HashSet<String> permissions;
 
     @Override
     @JsonIgnore

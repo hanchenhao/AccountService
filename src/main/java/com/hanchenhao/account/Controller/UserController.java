@@ -32,7 +32,7 @@ public class UserController {
     }
 
     @GetMapping("/test/test1")
-    @PreAuthorize("hasAuthority('test')")
+    @PreAuthorize("hasAuthority('sys:test')")
     public String test1() {
         return "hhh";
     }
@@ -48,14 +48,14 @@ public class UserController {
     }
 
     @PostMapping("/user/register")
-    public ResponseEntity<UserInfo> userRegister(@RequestParam("username") String name,
-                                                 @RequestParam("password") String password) {
+    public ResponseEntity<UserInfo> userRegister(@RequestParam("username") String name, @RequestParam("password") String password) {
         userInfoService.userInfoRegister(name, password);
         UserInfo user = UserInfo.builder()
                 .userName(name)
                 .build();
         return ResponseEntity.ok(user);
     }
+
     @PostMapping("/user/logout")
     public ResponseEntity<String> logout() {
         return ResponseEntity.ok(userInfoService.logout());

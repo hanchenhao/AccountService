@@ -34,11 +34,13 @@ public class SecurityConfig {
 
 
     @Bean
+    @SuppressWarnings("UnnecessaryParentheses")
     public WebSecurityCustomizer webSecurityCustomizer() {
         return (web) -> web.ignoring().requestMatchers("/user/register");
     }
 
     @Bean
+    @SuppressWarnings("UnnecessaryParentheses")
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http.authorizeHttpRequests((requests) -> requests
                         .requestMatchers("/", "/user/**").permitAll()

@@ -12,7 +12,7 @@ import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.junit.jupiter.MockitoExtension;
 
-import java.time.LocalTime;
+import java.time.LocalDateTime;
 
 
 @ExtendWith(MockitoExtension.class)
@@ -30,13 +30,13 @@ class UserInfoDaoImplTest {
         String name = "hanchenhao";
         long userId = 1;
         String password = "123456";
-        LocalTime time = LocalTime.now();
+        LocalDateTime time = LocalDateTime.now();
         UserInfo userInfo = UserInfo.builder()
                 .userName(name)
                 .id(userId)
                 .password(password)
-                .createdAt(time)
-                .updatedAt(time)
+                .createTime(time)
+                .updateTime(time)
                 .build();
         Mockito.doReturn(userInfo).when(mapper).getUserInfoById(userId);
 
