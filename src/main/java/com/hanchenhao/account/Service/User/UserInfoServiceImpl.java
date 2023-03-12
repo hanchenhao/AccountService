@@ -87,8 +87,8 @@ public class UserInfoServiceImpl implements UserInfoService {
         if (Objects.isNull(principal)){
             throw new RuntimeException("没有查询到用户信息");
         }
-        redisTemplate.delete("jwt:" + principal);
-        redisTemplate.delete("UserDetails:" + principal);
+        redisTemplate.delete("jwt:" + "mason");
+        redisTemplate.delete("UserDetails:" + "mason");
         return principal.toString() + ": 退出登录成功";
     }
 }

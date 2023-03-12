@@ -5,15 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d1617799-2e14-4baa-a27a-bb4556a3bbd3" name="Changes" comment="feat(logout)">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/hanchenhao/account/Security/Handler/AccessDeniedHandlerImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/hanchenhao/account/Security/Handler/AuthenticationEntryPointImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hanchenhao/account/Config/RedisConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hanchenhao/account/Config/RedisConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hanchenhao/account/Controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hanchenhao/account/Controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hanchenhao/account/DAO/Implement/UserInfoDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hanchenhao/account/DAO/Implement/UserInfoDaoImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/hanchenhao/account/DAO/Mapper/UserInfoMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hanchenhao/account/DAO/Mapper/UserInfoMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hanchenhao/account/Security/Config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hanchenhao/account/Security/Config/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hanchenhao/account/Model/Persistence/UserInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hanchenhao/account/Model/Persistence/UserInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hanchenhao/account/Security/Filter/JwtAuthenticationTokenFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hanchenhao/account/Security/Filter/JwtAuthenticationTokenFilter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/hanchenhao/account/Security/LoginDetails/LoginUserDetails.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hanchenhao/account/Security/LoginDetails/LoginUserDetails.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hanchenhao/account/Service/User/UserDetailsServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hanchenhao/account/Service/User/UserDetailsServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/hanchenhao/account/Service/User/UserInfoServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hanchenhao/account/Service/User/UserInfoServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/hanchenhao/account/DAO/Implement/UserInfoDaoImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/hanchenhao/account/DAO/Implement/UserInfoDaoImplTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/db/migration/V1__create_init_table.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/db/migration/V1__create_init_table.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,6 +86,9 @@
     <option name="notificationShown" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.hanchenhao.account.DAO.Mapper" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/src/main/java" />
@@ -211,7 +215,7 @@
       <updated>1677654518993</updated>
       <workItem from="1677654520526" duration="6729000" />
       <workItem from="1677721530638" duration="2319000" />
-      <workItem from="1677723859654" duration="214619000" />
+      <workItem from="1677723859654" duration="222230000" />
     </task>
     <task id="LOCAL-00001" summary="chore(ignore)&#10;add some fields of ignore">
       <created>1677658024346</created>
@@ -353,7 +357,14 @@
       <option name="project" value="LOCAL" />
       <updated>1678448186991</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="feat(logout)">
+      <created>1678522594036</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1678522594036</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -442,22 +453,22 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/hanchenhao/account/Security/Filter/JwtAuthenticationTokenFilter.java</url>
-          <line>39</line>
+          <line>40</line>
           <option name="timeStamp" value="94" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/hanchenhao/account/Security/Filter/JwtAuthenticationTokenFilter.java</url>
-          <line>60</line>
+          <line>61</line>
           <option name="timeStamp" value="95" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/hanchenhao/account/Security/Filter/JwtAuthenticationTokenFilter.java</url>
-          <line>53</line>
+          <line>54</line>
           <option name="timeStamp" value="96" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/hanchenhao/account/Security/Filter/JwtAuthenticationTokenFilter.java</url>
-          <line>51</line>
+          <line>52</line>
           <option name="timeStamp" value="98" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
@@ -467,13 +478,18 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/hanchenhao/account/Security/LoginDetails/LoginUserDetails.java</url>
-          <line>30</line>
+          <line>32</line>
           <option name="timeStamp" value="100" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/hanchenhao/account/Service/User/UserDetailsServiceImpl.java</url>
+          <line>37</line>
+          <option name="timeStamp" value="102" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/hanchenhao/account/Service/User/UserInfoServiceImpl.java</url>
-          <line>90</line>
-          <option name="timeStamp" value="101" />
+          <line>91</line>
+          <option name="timeStamp" value="104" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

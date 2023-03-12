@@ -3,14 +3,12 @@ package com.hanchenhao.account.Security.LoginDetails;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.hanchenhao.account.Model.Persistence.UserInfo;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
+import java.util.Arrays;
 import java.util.Collection;
 import java.util.HashSet;
 import java.util.stream.Collectors;
@@ -22,12 +20,16 @@ import java.util.stream.Collectors;
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class LoginUserDetails implements UserDetails {
     private UserInfo userInfo;
-    private HashSet<String> permissions;
+    private String permissions;
 
     @Override
     @JsonIgnore
     public Collection<? extends GrantedAuthority> getAuthorities() {
-        return permissions.stream().map(SimpleGrantedAuthority::new)
+        if (permissions.isEmpty()) {
+            return null;
+        }
+        val permissionSting = Arrays.stream(permissions.split(",")).toList();
+        return permissionSting.stream().map(SimpleGrantedAuthority::new)
                 .collect(Collectors.toList());
     }
 

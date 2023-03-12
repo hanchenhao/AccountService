@@ -6,8 +6,8 @@ CREATE TABLE `account_userinfo`
     `salt`        varchar(50)         NOT NULL,
     `create_time` datetime            NOT NULL,
     `update_time` datetime DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
-    `roles`       set ('normal'),
-    `perms`       set ('normal'),
+    `roles`       varchar(100),
+    `perms`       varchar(100),
     `status`      tinyint DEFAULT 1 ,
     PRIMARY KEY `pk_id` (`id`),
     UNIQUE KEY `uk_username` (`username`)
