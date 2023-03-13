@@ -10,7 +10,7 @@ public class ServiceException extends RuntimeException {
     public enum ErrorType {
         SERVICE,
         CLIENT,
-        Client, UNKNOWN
+        UNKNOWN
     }
 
     private int statusCode; //http状态码

@@ -24,4 +24,18 @@ public class BaseExceptionHandler {
                 .body(error);
     }
 
+    @ExceptionHandler(AuthenticationException.class)
+    ResponseEntity<?> AuthenticationExceptionHandle(AuthenticationException e) {
+        val error = ErrorContent.builder()
+                .errorMessage(e.getMessage())
+                .serviceCode(e.getServiceCode())
+                .statusCode(e.getStatusCode())
+                .errorType(e.getErrorType())
+                .build();
+        return ResponseEntity.status(e.getStatusCode() != 0 ? e.getStatusCode()
+                        : HttpStatus.INTERNAL_SERVER_ERROR.value())
+                .contentType(MediaType.APPLICATION_JSON)
+                .body(error);
+    }
+
 }
